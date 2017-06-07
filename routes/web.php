@@ -17,5 +17,8 @@ Route::get('/', function () {
 
 Route::get('testmodel', function(){
 	$q=App\Post::all();
-	return $q;
+	$pr=App\produk::all();
+	$pe=App\penggunaa::all();
+	$pt=App\pengaturann::all();
+	return $q."<br></br>".$pr."<br></br>".$pe."<br></br>".$pt;
 });
