@@ -14,3 +14,8 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('testmodel', function(){
+	$q=App\Post::all();
+	return $q;
+});
