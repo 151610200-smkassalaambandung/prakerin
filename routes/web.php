@@ -22,3 +22,8 @@ Route::get('testmodel', function(){
 	$pt=App\pengaturann::all();
 	return $q."<br></br>".$pr."<br></br>".$pe."<br></br>".$pt;
 });
+Route::get('/test','mycontroller@percobaan');
+Route::get('/test2','mycontroller@percobaan2');
+Route::get('/test3','mycontroller@percobaan3');
+Route::get('/test4','mycontroller@percobaan4');
+
