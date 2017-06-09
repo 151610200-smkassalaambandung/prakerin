@@ -44,11 +44,12 @@ class mycontroller extends Controller
     	$buah = ['Mangga','Jeruk','Apel','Anggur'];
     	return view('latihan.buah', compact('buah'));
     }
-    public function percobaan7()
+    public function param($pilih)
     {
-    	$buah = ['Mangga','Jeruk','Apel','Anggur','cerry'];
-    	$hewan = ['kucing','anjing','cacing','ayam','tikus'];
-    	$komputer = ['asus','acer','hp','lenovo','apple'];
-    	return view('latihan.latihan', compact('buah','hewan','komputer'));
+        $campur = ['buah'=>['Mangga','Jeruk','Apel','Anggur','cerry'],
+                    'hewan'=>['kucing','anjing','cacing','ayam','tikus'],
+                    'komputer'=> ['asus','acer','hp','lenovo','apple']];
+        $baru=$campur[$pilih];
+    	return view('latihan.latihan', compact('baru','pilih'));
     }
 }
