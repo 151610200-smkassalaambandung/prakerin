@@ -48,8 +48,10 @@ class mycontroller extends Controller
     {
         $campur = ['buah'=>['Mangga','Jeruk','Apel','Anggur','cerry'],
                     'hewan'=>['kucing','anjing','cacing','ayam','tikus'],
-                    'komputer'=> ['asus','acer','hp','lenovo','apple']];
+                    'jenis'=>['anggora','persia'],
+                    'komputer'=>['Asus','Acer','Hp','Lenovo','Mac']];
         $baru=$campur[$pilih];
     	return view('latihan.latihan', compact('baru','pilih'));
     }
+     
 }
