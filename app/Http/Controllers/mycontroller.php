@@ -47,8 +47,7 @@ class mycontroller extends Controller
     public function param($pilih)
     {
         $campur = ['buah'=>['Mangga','Jeruk','Apel','Anggur','cerry'],
-                    'hewan'=>['kucing','anjing','cacing','ayam','tikus'],
-                    'jenis'=>['anggora','persia'],
+                    'hewan'=>['kucing'=>['anggora','persia']],
                     'komputer'=>['Asus','Acer','Hp','Lenovo','Mac']];
         $baru=$campur[$pilih];
     	return view('latihan.latihan', compact('baru','pilih'));

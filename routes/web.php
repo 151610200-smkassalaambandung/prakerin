@@ -29,4 +29,4 @@ Route::get('/test4','mycontroller@percobaan4');
 Route::get('/test5','mycontroller@percobaan5');
 Route::get('/test6','mycontroller@percobaan6');
 Route::get('/test7','mycontroller@percobaan7');
-Route::get('/test8/{pilih}','mycontroller@param');
+Route::get('/test8/{pilih?}/{pilih2?}','mycontroller@param');
