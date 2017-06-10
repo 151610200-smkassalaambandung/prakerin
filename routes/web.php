@@ -30,3 +30,5 @@ Route::get('/test5','mycontroller@percobaan5');
 Route::get('/test6','mycontroller@percobaan6');
 Route::get('/test7','mycontroller@percobaan7');
 Route::get('/test8/{pilih?}/{baru?}','mycontroller@param');
+Route::get('/coba', 'SiswaController@Percobaan');
+Route::get('/show/{id}', 'SiswaController@Show');
