@@ -44,13 +44,25 @@ class mycontroller extends Controller
     	$buah = ['Mangga','Jeruk','Apel','Anggur'];
     	return view('latihan.buah', compact('buah'));
     }
-    public function param($pilih)
+    public function param($data, $data2 = null)
     {
-        $campur = ['buah'=>['Mangga','Jeruk','Apel','Anggur','cerry'],
-                    'hewan'=>['kucing'=>['anggora','persia']],
-                    'komputer'=>['Asus','Acer','Hp','Lenovo','Mac']];
-        $baru=$campur[$pilih];
-    	return view('latihan.latihan', compact('baru','pilih'));
+        $array = array('binatang' =>['kucing'=>['anggora','persia'],
+                                     'hamster'=>['hamtaro','hamtari'],
+                                     'kelinci'=>['anggora','persia']],
+                        'buah' =>['mangga'=>['harumanis','marijan'],
+                                    'alpukat'=>['hijau','hitam'],
+                                    'apel'=>['fuji','hijau']],
+                        'komputer' =>['asus'=>['roug','x4413'],
+                                        'acer'=>['predator','aspire'],
+                                        'hp'=>['probook','pavilion']]
+                                    );
+        if ($data) {
+            $query = (array_keys($array[$data]));
+        }
+        if ($data2) {
+            $query = ($array[$data][$data2]);
+        }
+    	return view('latihan.latihan', compact('query','data','data2'));
     }
      
 }

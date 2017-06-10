@@ -5,9 +5,9 @@
 </head>
 <body>
 <center>
- Daftar : <b>{{$pilih}} {{pilih2}}</b>
- @foreach($query as $data)
- <li>{{$data}}</li>
+ Daftar : <b>{{$data}} {{$data2}}</b>
+ @foreach($query as $key)
+ <li>{{$key}}</li>
  @endforeach
 
 </center>
