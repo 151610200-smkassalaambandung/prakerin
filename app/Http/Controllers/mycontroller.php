@@ -22,7 +22,7 @@ class mycontroller extends Controller
     //passing data variable to view
     public function percobaan3()
     {
-    	$a = "Fallah";
+    	$a = "fallah";
     	return view('latihan.saya', compact('a'));
     }
     public function percobaan4()
